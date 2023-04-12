@@ -9,5 +9,6 @@ it('should return the right value', () =>{
         const cb = jest.fn()
         cb.mockReturnValue(1)
         expect(modulo1.funct2(10, cb)).toBe(11)
+        expect(cb.mock.calls[0][0]).toBe(10)
     })
 })
